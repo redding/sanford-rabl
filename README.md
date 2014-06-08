@@ -1,10 +1,26 @@
 # SanfordRabl
 
-Sanford template engine for Rabl templates
+Sanford [template engine](https://github.com/redding/sanford) for rendering Rabl templates
 
 ## Usage
 
-TODO: Write code samples and usage instructions here
+Register the engine:
+
+```ruby
+# in config/services.rb or wherever
+require 'sanford'
+require 'sanford-rabl'
+
+Sanford.configure do |c|
+
+  c.template_source "/path/to/templates") do |s|
+    s.engine 'rabl', Sanford::Rabl::TemplateEngine
+  end
+
+end
+```
+
+Add `.rabl` to any template files in your template source path.  Sanford will render their content using Rabl when they are rendered.
 
 ## Installation
 
