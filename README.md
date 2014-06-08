@@ -1,4 +1,4 @@
-# SanfordRabl
+# Sanford::Rabl
 
 Sanford [template engine](https://github.com/redding/sanford) for rendering Rabl templates
 
