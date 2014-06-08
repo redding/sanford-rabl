@@ -1,5 +1,4 @@
 require "sanford-rabl/version"
 
-module SanfordRabl
-  # TODO: your code goes here...
+module Sanford::Rabl
 end

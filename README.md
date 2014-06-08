@@ -1,6 +1,6 @@
 # SanfordRabl
 
-TODO: Write a gem description
+Sanford template engine for Rabl templates
 
 ## Usage
 
