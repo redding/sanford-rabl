@@ -24,7 +24,7 @@ Add `.rabl` to any template files in your template source path.  Sanford will re
 
 ### Notes
 
-Rabl allows you to specify the template scope.  Templates will be rendered in the scope Sanford renders with (the service handler).  Therefore, you can access any service handler attributes directly in the template file.
+Rabl allows you to specify the template scope.  Templates will be rendered in the scope of the service handler.  Therefore, you can access any service handler attributes directly in the template file.
 
 ## Installation
 
