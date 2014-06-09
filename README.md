@@ -13,7 +13,7 @@ require 'sanford-rabl'
 
 Sanford.configure do |c|
 
-  c.template_source "/path/to/templates") do |s|
+  c.template_source "/path/to/templates" do |s|
     s.engine 'rabl', Sanford::Rabl::TemplateEngine
   end
 
@@ -21,6 +21,10 @@ end
 ```
 
 Add `.rabl` to any template files in your template source path.  Sanford will render their content using Rabl when they are rendered.
+
+### Notes
+
+Rabl allows you to specify the template scope.  Templates will be rendered in the scope Sanford renders with (the service handler).  Therefore, you can access any service handler attributes directly in the template file.
 
 ## Installation
 
