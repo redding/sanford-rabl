@@ -20,10 +20,14 @@ class Sanford::Rabl::TemplateEngine
     end
 
     should "render rabl template files as raw data output" do
-      thing = OpenStruct.new(:identifier => Factory.integer, :name => Factory.string)
-      exp = Factory.template_json_rendered(thing)
+      service_handler = OpenStruct.new({
+        :identifier => Factory.integer,
+        :name => Factory.string
+      })
+      locals = { :local1 => Factory.string }
+      exp = Factory.template_json_rendered(service_handler, locals)
 
-      assert_equal exp, subject.render('template.json', thing)
+      assert_equal exp, subject.render('template.json', service_handler, locals)
     end
 
   end

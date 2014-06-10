@@ -6,11 +6,12 @@ module Sanford::Rabl
 
   class TemplateEngine < Sanford::TemplateEngine
 
-    def render(path, scope)
+    def render(path, service_handler, locals)
       Rabl::Renderer.new(path, nil, {
         :view_path  => self.source_path,
-        :format     => 'hash'
-      }).render(scope)
+        :format     => 'hash',
+        :locals     => locals
+      }).render(service_handler)
     end
 
   end
